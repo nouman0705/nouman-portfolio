@@ -8,6 +8,7 @@
     <style>
         html{
             scroll-behavior: smooth;
+            overscroll-behavior-x: none;
         }
         #first{
           animation: movingText 1s ease-in;
@@ -48,28 +49,59 @@
         }
           }
 
+          #arrow{
+            animation: movingArrow 6s ease-in;
+          }
+
+        @keyframes movingArrow {
+            0%{
+                transform: translateY(25px);
+                opacity: 0;
+            }
+            20%{
+            transform : translateY(20px);
+            opacity: 0;
+        }
+        50%{
+            transform: translate(0);
+            opacity: 40%;
+        }
+        80%{
+            transform :translate(0);
+            opacity: 40%;
+        }
+        100%{
+            transform : translateY(0);
+            opacity: 40%;
+        }
+        }
+
+
     </style>
 </head>
-<body class="bg-black">
+<body class="bg-black m-0 p-0 overflow-x-hidden">
 
-    <header class="w-full h-20 bg-black/80 flex justify-between items-center border border-b-pink-500 shadow-[0_4px_10px_rgba(236,72,153,0.6)] sticky top-0 right-0 left-0 backdrop-blur-md">
+    <header class="w-full h-20 bg-black/80 flex justify-between items-center border border-b-pink-500 shadow-[0_4px_10px_rgba(236,72,153,0.6)] fixed top-0 right-0 left-0 backdrop-blur-md z-10">
         <div class="ml-10">
             <h1 class="text-pink-500 text-xl font-serif font-semibold tracking-wide">Nouman S</h1>
         </div>
         <div>
             <nav>
                 <ul class="text-gray-400 flex gap-10 mr-18 font-mono tracking-wide">
-                    <li class="cursor-pointer hover:text-pink-500 transition-all duration-300 ease-linear"><a href="#about">ABOUT</a></li>
-                    <li class="cursor-pointer hover:text-pink-500 transition-all duration-300 ease-linear"><a href="#skills">SKILLS</a></li>
-                    <li class="cursor-pointer hover:text-pink-500 transition-all duration-300 ease-linear"><a href="#projects">PROJECTS</a></li>
-                    <li class="cursor-pointer hover:text-pink-500 transition-all duration-300 ease-linear"><a href="#resume">RESUME</a></li>
-                    <li class="cursor-pointer hover:text-pink-500 transition-all duration-300 ease-linear"><a href="#contact">CONTACT</a></li>
+                    <li class="cursor-pointer hover:text-pink-500 transition-all duration-300 ease-linear active:text-sm"><a href="#about">ABOUT</a></li>
+                    <li class="cursor-pointer hover:text-pink-500 transition-all duration-300 ease-linear active:text-sm"><a href="#skills">SKILLS</a></li>
+                    <li class="cursor-pointer hover:text-pink-500 transition-all duration-300 ease-linear active:text-sm"><a href="#projects">PROJECTS</a></li>
+                    <li class="cursor-pointer hover:text-pink-500 transition-all duration-300 ease-linear active:text-sm"><a href="#resume">RESUME</a></li>
+                    <li class="cursor-pointer hover:text-pink-500 transition-all duration-300 ease-linear active:text-sm"><a href="#contact">CONTACT</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="h-[100vh-80px]">
+    <main>
+
+        <!-- Main section -->
+        <section class="h-[100vh] pt-[5%]" id="home">
         <aside class="mt-12 ml-12 w-[40%]">
             <div class="flex gap-3 mb-7" id="first">
             <span class="h-[1px] w-8 bg-pink-500 mt-[10px]"></span>
@@ -79,19 +111,22 @@
         <P class="text-gray-400 mt-5 text-xl/7 leading-9 [word-spacing:1px]" id="third">Full-Stack Developer — Aspiring software developer with a completed BCA degree and hands-on experience in full-stack web development. Skilled in HTML, CSS, JavaScript, Oracle SQL, and Java, with a strong foundation in backend and frontend technologies. Certified by Intel for internship performance. Recognized for creativity, clear communication, and a continuous drive to learn, adapt, and grow in the tech industry</P>
         </aside>
         <div id="fourth">
-            <div class="mt-10 ml-12 w-[50%]">
-            <a href="#projects"> <button class="bg-pink-500 px-8 py-3 rounded-tr-2xl rounded-bl-2xl font-bold mr-3 cursor-pointer hover:-translate-y-1 transition-all duration-150 ease-linear hover:bg-pink-400">VIEW MY WORK</button> </a>
-            <a href="#contact"> <button class="px-8 py-3 font-bold text-pink-500 border border-pink-950 cursor-pointer hover:-translate-y-1 transition-all duration-150 ease-linear hover:border-pink-500">GET IN TOUCH</button> </a>
+            <div class="mt-9 ml-12 w-[50%]">
+            <a href="#projects"> <button class="bg-pink-500 px-8 py-3 rounded-tr-2xl rounded-bl-2xl font-bold mr-3 cursor-pointer hover:-translate-y-1 transition-all duration-150 ease-linear hover:bg-pink-400 active:text-sm">VIEW MY WORK</button> </a>
+            <a href="#contact"> <button class="px-8 py-3 font-bold text-pink-500 border border-pink-950 cursor-pointer hover:-translate-y-1 transition-all duration-150 ease-linear hover:border-pink-500 active:text-sm">GET IN TOUCH</button> </a>
         </div>
-        <div class="flex gap-3 mt-10 ml-12" id="fifth">
+        <div class="flex gap-3 mt-9 ml-12" id="fifth">
             <span class="h-[1px] w-8 bg-pink-500 mt-[10px]"></span>
             <h1 class="text-gray-400 tracking-wider text-base [letter-spacing:4%] font-mono">SCROLL TO EXPLORE</h1>
         </div>
         </div>
-    </main>
+    </section>
 
+    <a href="#home" class="text-black h-12 w-12 font-bold sticky top-[40%] left-[95%] flex justify-center items-center text-3xl rounded-full bg-pink-500 opacity-40 backdrop-blur-xs z-10 hover:opacity-50 active:opacity-100 active:text-sm" id="arrow">↑</a>
+
+     <!-- About -->
     <section class="h-270 w-full bg-gray-950 mt-7.5 flex justify-between items-center" id="about">
-        
+
         <aside class="h-[85%] w-[45%] ml-12 flex justify-center items-center" id="about">
 
             <div class="h-[90%] w-[90%]">
@@ -168,7 +203,8 @@
         </figure>        
     </section>
 
-    <section class="h-170 w-full bg-black pt-28 px-13" id="skills">
+    <!-- Skills -->
+    <section class="h-[100vh] w-full bg-black pt-38 px-13" id="skills">
 
         <div class="w-full mb-17" id="first">
             <div class="flex gap-3 mb-2">
@@ -182,7 +218,7 @@
         </div>
 
         <div class="flex gap-8">
-            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center hover:border-pink-500" id="second">
+            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center cursor-pointer hover:border-pink-500" id="second">
                 <div>
                     <span class="text-3xl">⚡</span>
                 <h1 class="text-white font-serif font-semibold mt-5">Frontend Development</h1>
@@ -197,7 +233,7 @@
                 </div>
            </div>
 
-            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center hover:border-pink-500" id="third">
+            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center cursor-pointer hover:border-pink-500" id="third">
                 <div>
                     <span class="text-3xl">🔧</span>
                 <h1 class="text-white font-serif font-semibold mt-5">Backend Development</h1>
@@ -211,7 +247,7 @@
                 </div>
            </div>
 
-            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center hover:border-pink-500" id="fourth">
+            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center cursor-pointer hover:border-pink-500" id="fourth">
                 <div>
                     <span class="text-3xl">🗄️</span>
                 <h1 class="text-white font-serif font-semibold mt-5">Database</h1>
@@ -222,7 +258,7 @@
                 </div>
            </div>
 
-            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center hover:border-pink-500" id="fifth">
+            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center cursor-pointer hover:border-pink-500" id="fifth">
                 <div>
                     <span class="text-3xl">🚀</span>
                 <h1 class="text-white font-serif font-semibold mt-5">Tools & Workflow</h1>
@@ -238,6 +274,7 @@
 
     </section>
 
+    <!-- Projects -->
     <section class="h-220 w-full bg-gray-950 pt-27 px-13" id="projects">
 
         <div class="w-full mb-17" id="first">
@@ -253,7 +290,7 @@
 
         <div class="flex gap-8">
 
-            <div class="group h-130 w-md bg-gray-900 border border-pink-950 hover:border-pink-500" id="third">
+            <div class="group h-130 w-md bg-gray-900 border border-pink-950 cursor-pointer hover:border-pink-500" id="third">
                 <div class="h-[45%] w-full bg-linear-to-r from-gray-950 to-gray-900">
                     <h1 class="text-center h-[70%] flex justify-center items-center text-5xl">💪</h1>
                     <h1 class="text-6xl font-serif text-gray-800 flex items-center justify-end mr-5">01</h1>
@@ -269,7 +306,7 @@
                 </div>     
            </div>
 
-           <div class="group h-130 w-md bg-gray-900 border border-pink-950 hover:border-pink-500" id="second">
+           <div class="group h-130 w-md bg-gray-900 border border-pink-950 cursor-pointer hover:border-pink-500" id="second">
                 <div class="h-[45%] w-full bg-linear-to-r from-gray-950 to-gray-900">
                     <h1 class="text-center h-[70%] flex justify-center items-center text-5xl">🛒</h1>
                     <h1 class="text-6xl font-serif text-gray-800 flex items-center justify-end mr-5">02</h1>
@@ -285,7 +322,7 @@
                 </div>
            </div>
 
-            <div class="group h-130 w-md bg-gray-900 border border-pink-950 hover:border-pink-500" id="fourth">
+            <div class="group h-130 w-md bg-gray-900 border border-pink-950 cursor-pointer hover:border-pink-500" id="fourth">
                 <div class="h-[45%] w-full bg-linear-to-r from-gray-950 to-gray-900">
                     <h1 class="text-center h-[70%] flex justify-center items-center text-5xl">🏦</h1>
                     <h1 class="text-6xl font-serif text-gray-800 flex items-center justify-end mr-5">03</h1>
@@ -305,6 +342,7 @@
 
     </section>
 
+    <!-- Resume -->
     <section class="h-270 w-full bg-black pt-27 px-13" id="resume">
 
         <div class="w-full mb-12" id="first">
@@ -360,11 +398,11 @@
             
         </aside>
 
-            <span class="text-pink-400 text-4xl absolute mt-11 ml-180">•</span>
-            <span class="text-pink-400 text-4xl absolute mt-52 ml-180">•</span>
-            <span class="text-pink-400 text-4xl absolute mt-93 ml-180">•</span>
-
         <aside class="h-full w-[50%]">
+
+            <!-- <span class="text-pink-400 text-4xl absolute mt-11 ">•</span>
+            <span class="text-pink-400 text-4xl absolute mt-52 ">•</span>
+            <span class="text-pink-400 text-4xl absolute mt-93 ">•</span> -->
 
             <div>
                 <span class="text-2xl text-white font-serif mr-1 ml-1 inline-block">Skills & Technologies </span> <span class="h-[1px] w-110 bg-pink-400 inline-block mb-2"></span>
@@ -399,11 +437,12 @@
 
         <article class="h-42 bg-gray-900 ml-1 mt-30 flex justify-center items-center flex-col gap-4 border border-pink-400" id="fourth">
             <p class="text-gray-300">Want a comprehensive overview of my projects, skills, and achievements?</p>
-            <a href="./Resume.pdf" download> <button class="bg-pink-500 px-8 py-3 rounded-tr-2xl rounded-bl-2xl font-bold mr-3 cursor-pointer hover:-translate-y-1 transition-all duration-150 ease-linear hover:bg-pink-400">DOWNLOAD CV</button> </a>
+            <a href="./Resume.pdf" download> <button class="bg-pink-500 px-8 py-3 rounded-tr-2xl rounded-bl-2xl font-bold mr-3 cursor-pointer hover:-translate-y-1 transition-all duration-150 ease-linear hover:bg-pink-400 active:text-sm">DOWNLOAD CV</button> </a>
         </article>
 
     </section>
 
+    <!-- Contact -->
     <section class="h-200 w-full bg-gray-950 pl-13 pt-25 pr-15" id="contact">
 
         <div class="w-full mb-12" id="first">
@@ -417,28 +456,28 @@
               <span class="h-[3px] w-16 bg-pink-500 block"></span>
         </div>
 
-        <div class="h-115 w-full flex gap-[5%]">
-            <div class="h-full w-[40%]">
+        <div class="h-130 w-full flex gap-[5%]">
+            <div class="h-full w-[40%]" id="second">
                 <p class="text-gray-400 leading-7 [word-spacing:1px] mb-6">Have a project in mind? I'd love to hear about it. Whether you need a complete web application built from scratch or an existing system improved — let's talk.</p>
-                <a href=""><button class="h-17 w-full border border-pink-950 flex gap-5 pt-4 hover:border-pink-500 transition-all duration-300 ease-in-out">
+                <a href=""><button class="h-17 w-full border border-pink-950 flex gap-5 pt-4 cursor-pointer hover:border-pink-500 transition-all duration-300 ease-in-out active:translate-y-2">
                     <div class="h-full w-5 text-lg ml-5">✉️</div>
                     <div><p class="h-3 w-5 tracking-widest text-gray-400 text-xs font-mono">EMAIL</p> <p class="text-white text-sm">snouman2004@gmail.com</p> </div>
                 </button></a>
-                <a href=""><button class="h-17 w-full border border-pink-950 flex gap-5 py-5 mt-5 hover:border-pink-500 transition-all duration-300 ease-in-out">
+                <a href=""><button class="h-17 w-full border border-pink-950 flex gap-5 py-5 mt-5 cursor-pointer hover:border-pink-500 transition-all duration-300 ease-in-out active:translate-y-2">
                     <div class="h-full w-5 text-lg ml-5">💼</div>
                     <div><p class="h-3 w-5 tracking-widest text-gray-400 text-xs font-mono">LINKEDIN</p> <p class="text-white text-sm">linkedin.com/in/nouman05</p> </div>
                 </button></a>
-                <a href=""><button class="h-17 w-full border border-pink-950 flex gap-5 py-5 mt-5 hover:border-pink-500 transition-all duration-300 ease-in-out">
+                <a href=""><button class="h-17 w-full border border-pink-950 flex gap-5 py-5 mt-5 cursor-pointer hover:border-pink-500 transition-all duration-300 ease-in-out active:translate-y-2">
                     <div class="h-full w-5 text-lg ml-5">🐙</div>
                     <div><p class="h-3 w-5 tracking-widest text-gray-400 text-xs font-mono">GITHUB</p> <p class="text-white text-sm">github.com/nouman0705</p> </div>
                 </button></a>
-                <a href=""><button class="h-17 w-full border border-pink-950 flex gap-5 py-5 mt-5 hover:border-pink-500 transition-all duration-300 ease-in-out">
+                <a href=""><button class="h-17 w-full border border-pink-950 flex gap-5 py-5 mt-5 cursor-pointer hover:border-pink-500 transition-all duration-300 ease-in-out active:translate-y-2">
                     <div class="h-full w-5 text-lg ml-5">📞</div>
                     <div><p class="h-3 w-5 tracking-widest text-gray-400 text-xs font-mono">MOBILE</p> <p class="text-white font-mono text-sm">+917418898740</p> </div>
                 </button></a>
             </div>
 
-            <div class="h-full w-[55%] bg-blue-900">
+            <div class="h-full w-[55%]" id="third">
                 <form action="">
                     <div class="h-20 w-full flex justify-between mb-3">
                         <div class="h-20 w-[49%]">
@@ -460,11 +499,28 @@
                     <label for="" class="tracking-widest text-gray-400 text-sm font-mono">MESSAGE</label>
                     <textarea name="" id="" placeholder="Tell me about your project..." class="mb-2 outline-none border border-pink-950 block py-3 pl-4 h-30 w-full mt-1 bg-gray-900 text-gray-400 focus:outline-none focus:text-white focus:border-pink-500 transition-all duration-300 ease-in-out"></textarea>
 
+                    <a href=""><button class="bg-pink-500 w-full px-70 py-3 rounded-tr-2xl rounded-bl-2xl font-bold mr-3 mt-2 cursor-pointer hover:-translate-y-1 transition-all duration-150 ease-linear hover:bg-pink-400 active:text-sm active:w-[98%]" id="fourth">SEND MESSAGE</button></a>
+
                 </form>
             </div>
         </div>
 
     </section>
 
+    </main>
+
+    <footer class="h-25 w-full bg-black flex items-center justify-around gap-70">
+
+        <h1 class="text-pink-500 text-lg font-serif font-semibold tracking-wide">Nouman</h1>
+        <p class="text-sm text-gray-400">© 2025 Nouman Full-Stack Developer.</p>
+        <ul class="flex gap-5">
+           <li class="cursor-pointer text-gray-400 text-xs hover:text-pink-500 transition-all duration-300 ease-linear active:translate-y-2"><a href="#about">ABOUT</a></li>
+           <li class="cursor-pointer text-gray-400 text-xs hover:text-pink-500 transition-all duration-300 ease-linear active:translate-y-2"><a href="#projects">WORK</a></li>
+           <li class="cursor-pointer text-gray-400 text-xs hover:text-pink-500 transition-all duration-300 ease-linear active:translate-y-2"><a href="#contact">CONTACT</a></li>
+        </ul>
+
+    </footer>
+
+    <script src="./script.js"></script>
 </body>
 </html>
