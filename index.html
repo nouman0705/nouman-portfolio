@@ -62,17 +62,21 @@
             transform : translateY(20px);
             opacity: 0;
         }
-        50%{
+        40%{
             transform: translate(0);
-            opacity: 40%;
+            opacity: 60%;
+        }
+        60%{
+            transform :translate(0);
+            opacity: 80%;
         }
         80%{
-            transform :translate(0);
-            opacity: 40%;
+            transform: translate(0);
+            opacity: 90%;
         }
         100%{
             transform : translateY(0);
-            opacity: 40%;
+            opacity: 100%;
         }
         }
 
@@ -101,12 +105,13 @@
     <main>
 
         <!-- Main section -->
-        <section class="h-[100vh] pt-[5%]" id="home">
-        <aside class="mt-12 ml-12 w-[40%]">
+        <section class="h-screen w-screen flex gap-[3%] pt-[5%]" id="home">
+            <aside class=" h-full w-[50%]">
+                <aside class="mt-12 ml-12 w-full">
             <div class="flex gap-3 mb-7" id="first">
             <span class="h-[1px] w-8 bg-pink-500 mt-[10px]"></span>
             <h1 class="tracking-widest text-pink-500 text-base font-mono">AVAILABLE FOR HIRE</h1>
-        </div>
+            </div>
             <h1 class="text-white text-8xl font-serif" id="second">S<span class="text-pink-500">.</span> Nouman</h1>
         <P class="text-gray-400 mt-5 text-xl/7 leading-9 [word-spacing:1px]" id="third">Full-Stack Developer — Aspiring software developer with a completed BCA degree and hands-on experience in full-stack web development. Skilled in HTML, CSS, JavaScript, Oracle SQL, and Java, with a strong foundation in backend and frontend technologies. Certified by Intel for internship performance. Recognized for creativity, clear communication, and a continuous drive to learn, adapt, and grow in the tech industry</P>
         </aside>
@@ -120,14 +125,21 @@
             <h1 class="text-gray-400 tracking-wider text-base [letter-spacing:4%] font-mono">SCROLL TO EXPLORE</h1>
         </div>
         </div>
+            </aside>
+
+            <aside class="w-[47%] h-full border flex justify-center items-center border-pink-500">
+
+                <div class="text-white">Avatar</div>
+                
+            </aside>
     </section>
 
-    <a href="#home" class="text-black h-12 w-12 font-bold sticky top-[40%] left-[95%] flex justify-center items-center text-3xl rounded-full bg-pink-500 opacity-40 backdrop-blur-xs z-10 hover:opacity-50 active:opacity-100 active:text-sm" id="arrow">↑</a>
+    <a href="#home" class="text-black h-12 w-12 font-bold sticky top-[85%] left-[95%] flex justify-center items-center text-3xl rounded-full bg-pink-500 opacity-100 z-10 shadow-[0_2px_10px_rgba(236,72,153,0.6)]" id="arrow">↑</a>
 
      <!-- About -->
     <section class="h-270 w-full bg-gray-950 mt-7.5 flex justify-between items-center" id="about">
 
-        <aside class="h-[85%] w-[45%] ml-12 flex justify-center items-center" id="about">
+        <aside class="h-[85%] w-[45%] ml-5 flex justify-center items-center" id="about">
 
             <div class="h-[90%] w-[90%]">
 
@@ -140,13 +152,13 @@
 
               <span class="h-[3px] w-16 bg-pink-500 block mb-8"></span>
 
-              <p class="text-gray-400 mt-5 text-base/7 leading-9 [word-spacing:1px]">I'm a passionate Full-Stack Developer with a love for crafting elegant, performant web applications. From pixel-perfect frontends to robust, scalable backends — I bring ideas to life with clean, maintainable code.</p>
+              <p class="text-gray-400 mt-5 text-base/7 leading-9 [word-spacing:1px]" id="second">I'm a passionate Full-Stack Developer with a love for crafting elegant, performant web applications. From pixel-perfect frontends to robust, scalable backends — I bring ideas to life with clean, maintainable code.</p>
 
-              <p class="text-gray-400 mt-5 text-base/7 leading-9 [word-spacing:1px]">With a strong foundation in modern web technologies and an eye for design, I bridge the gap between engineering and user experience. I thrive in collaborative environments and enjoy tackling complex problems with pragmatic, well-architected solutions.</p>
+              <p class="text-gray-400 mt-5 text-base/7 leading-9 [word-spacing:1px]" id="second">With a strong foundation in modern web technologies and an eye for design, I bridge the gap between engineering and user experience. I thrive in collaborative environments and enjoy tackling complex problems with pragmatic, well-architected solutions.</p>
 
-              <p class="text-gray-400 mt-5 text-base/7 leading-9 [word-spacing:1px]">When I'm not writing code, I'm exploring new technologies, contributing to open-source, and continuously refining my craft.</p>
+              <p class="text-gray-400 mt-5 text-base/7 leading-9 [word-spacing:1px]" id="second">When I'm not writing code, I'm exploring new technologies, contributing to open-source, and continuously refining my craft.</p>
 
-              <div class="grid grid-cols-2 grid-rows-2 gap-5 mt-6">
+              <div class="grid grid-cols-2 grid-rows-2 gap-5 mt-6" id="third">
 
                 <div class="h-30 w-74 bg-gray-900 flex gap-5 items-center">
                     <div class="h-[100%] w-[2px] bg-pink-500 inline-block"></div>
@@ -186,17 +198,8 @@
             
         </aside>
 
-        <figure class="h-[85%] w-[45%] mr-12">
-
-            <div class="h-[2px] w-12 bg-pink-500"></div>
-            <div class="flex h-[100%]">
-                <div class="h-12 w-[2px] bg-pink-500 inline-block"></div>
-            <div class="h-full w-[99%] flex justify-center items-center">
-
-                <div class="h-[96%] w-[96%] bg-gray-900 border border-pink-500">
-
-                </div>
-
+        <figure class="h-[70%] w-[45%] mb-13" id="fourth">
+                    <img src="./imgs.png" alt="" class="border border-pink-500 w-[80%] h-full rounded-full shadow-[0_2px_20px_rgba(236,72,153,0.6)] object-cover">
             </div>
             </div>
 
@@ -218,7 +221,7 @@
         </div>
 
         <div class="flex gap-8">
-            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center cursor-pointer hover:border-pink-500" id="second">
+            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center cursor-pointer hover:border-pink-500 transition-all duration-300 hover:shadow-[0_2px_5px_rgba(236,72,153,0.6)]" id="second">
                 <div>
                     <span class="text-3xl">⚡</span>
                 <h1 class="text-white font-serif font-semibold mt-5">Frontend Development</h1>
@@ -233,7 +236,7 @@
                 </div>
            </div>
 
-            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center cursor-pointer hover:border-pink-500" id="third">
+            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center cursor-pointer hover:border-pink-500 transition-all duration-300 hover:shadow-[0_2px_5px_rgba(236,72,153,0.6)]" id="third">
                 <div>
                     <span class="text-3xl">🔧</span>
                 <h1 class="text-white font-serif font-semibold mt-5">Backend Development</h1>
@@ -247,7 +250,7 @@
                 </div>
            </div>
 
-            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center cursor-pointer hover:border-pink-500" id="fourth">
+            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center cursor-pointer hover:border-pink-500 transition-all duration-300 hover:shadow-[0_2px_5px_rgba(236,72,153,0.6)]" id="fourth">
                 <div>
                     <span class="text-3xl">🗄️</span>
                 <h1 class="text-white font-serif font-semibold mt-5">Database</h1>
@@ -258,12 +261,12 @@
                 </div>
            </div>
 
-            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center cursor-pointer hover:border-pink-500" id="fifth">
+            <div class="group h-60 w-80 bg-gray-950 border border-pink-950 flex justify-center items-center cursor-pointer hover:border-pink-500 transition-all duration-300 hover:shadow-[0_2px_5px_rgba(236,72,153,0.6)]" id="fifth">
                 <div>
                     <span class="text-3xl">🚀</span>
                 <h1 class="text-white font-serif font-semibold mt-5">Tools & Workflow</h1>
                 <div id="inner" class="grid grid-cols-2 gap-x-0 gap-y-2 mt-5">
-                    <p class="text-gray-400 border border-pink-950 h-[30px] w-[70px] flex justify-center items-center text-sm group-hover:text-white transition-all duration-300 ease-linear group-hover:border-pink-500">Git</p>
+                    <p class="text-gray-400 border border-pink-950 h-[30px] w-[70px] flex justify-center items-center text-sm group-hover:text-white transition-all duration-300 ease-linear group-hover:border-pink-500">GitHub</p>
                     <p class="text-gray-400 border border-pink-950 h-[30px] w-[80px] flex justify-center items-center text-sm group-hover:text-white transition-all duration-300 ease-linear group-hover:border-pink-500">Figma</p>
                     <p class="text-gray-400 border border-pink-950 h-[30px] w-[90px] flex justify-center items-center text-sm group-hover:text-white transition-all duration-300 ease-linear group-hover:border-pink-500">Postman</p>
                 </div>
@@ -290,7 +293,7 @@
 
         <div class="flex gap-8">
 
-            <div class="group h-130 w-md bg-gray-900 border border-pink-950 cursor-pointer hover:border-pink-500" id="third">
+            <div class="group h-130 w-md bg-gray-900 border border-pink-950 cursor-pointer hover:border-pink-500 transition-all duration-300 hover:shadow-[0_2px_5px_rgba(236,72,153,0.6)]" id="second">
                 <div class="h-[45%] w-full bg-linear-to-r from-gray-950 to-gray-900">
                     <h1 class="text-center h-[70%] flex justify-center items-center text-5xl">💪</h1>
                     <h1 class="text-6xl font-serif text-gray-800 flex items-center justify-end mr-5">01</h1>
@@ -306,7 +309,7 @@
                 </div>     
            </div>
 
-           <div class="group h-130 w-md bg-gray-900 border border-pink-950 cursor-pointer hover:border-pink-500" id="second">
+           <div class="group h-130 w-md bg-gray-900 border border-pink-950 cursor-pointer hover:border-pink-500 transition-all duration-300 hover:shadow-[0_2px_5px_rgba(236,72,153,0.6)]" id="third">
                 <div class="h-[45%] w-full bg-linear-to-r from-gray-950 to-gray-900">
                     <h1 class="text-center h-[70%] flex justify-center items-center text-5xl">🛒</h1>
                     <h1 class="text-6xl font-serif text-gray-800 flex items-center justify-end mr-5">02</h1>
@@ -322,7 +325,7 @@
                 </div>
            </div>
 
-            <div class="group h-130 w-md bg-gray-900 border border-pink-950 cursor-pointer hover:border-pink-500" id="fourth">
+            <div class="group h-130 w-md bg-gray-900 border border-pink-950 cursor-pointer hover:border-pink-500 transition-all duration-300 hover:shadow-[0_2px_5px_rgba(236,72,153,0.6)]" id="fourth">
                 <div class="h-[45%] w-full bg-linear-to-r from-gray-950 to-gray-900">
                     <h1 class="text-center h-[70%] flex justify-center items-center text-5xl">🏦</h1>
                     <h1 class="text-6xl font-serif text-gray-800 flex items-center justify-end mr-5">03</h1>
@@ -345,7 +348,7 @@
     <!-- Resume -->
     <section class="h-270 w-full bg-black pt-27 px-13" id="resume">
 
-        <div class="w-full mb-12" id="first">
+        <div class="w-full mb-12" id="second">
             <div class="flex gap-3 mb-2">
             <span class="h-[1px] w-8 bg-pink-500 mt-[10px]"></span>
             <h1 class="tracking-widest text-pink-500 text-base font-mono">EXPERIENCE</h1>
@@ -405,37 +408,35 @@
             <span class="text-pink-400 text-4xl absolute mt-93 ">•</span> -->
 
             <div>
-                <span class="text-2xl text-white font-serif mr-1 ml-1 inline-block">Skills & Technologies </span> <span class="h-[1px] w-110 bg-pink-400 inline-block mb-2"></span>
+                <span class="text-2xl text-white font-serif mr-1 ml-1 inline-block">Learning & Achievements </span> <span class="h-[1px] w-100 bg-pink-400 inline-block mb-2"></span>
             </div>
 
             
             <div class="inline-block h-[450px] w-full border-l border-pink-400 pl-7 pt-1.5 mt-4 ml-1.5">
                 
                 <div>
-                    <h1 class="tracking-wider text-pink-500 text-[15px] [letter-spacing:4%] font-mono">🎨Frontend</h1>
-                <h1 class="text-white text-base font-bold">Frontend - Development</h1>
-                <p class="text-gray-400 mb-3 text-sm">HTML • CSS • javaScript • React JS • Tailwind CSS • Bootstrap</p>
-                <p class="text-gray-400 text-sm leading-6">Develop responsive and interactive user interfaces with modern design principles and optimized performance.</p>
+                    <h1 class="tracking-wider text-pink-500 text-[15px] [letter-spacing:4%] font-mono">🚀Internship</h1>
+                <h1 class="text-white mb-2 text-base font-bold">💼Intern, Intel - Cresent Innovation Incubation Council, Chennai</h1>
+                <p class="text-gray-400 text-sm leading-6">• Learned IoT applications used in smart city waste management systems.</p>
+                <p class="text-gray-400 text-sm leading-6">• Gained knowledge of IoT sensors, robotics and automation technoligies.</p>
+                <p class="text-gray-400 text-sm leading-6">• Understood sensor integration and data-driven infrastructure solutions.</p>
+                <p class="text-gray-400 text-sm leading-6">• Developed basic understanding of database management and IoT data hansling.</p>
                 </div>
 
                 <div class="mt-9">
-                    <h1 class="tracking-wider text-pink-500 text-[15px] [letter-spacing:4%] font-mono">⚙️Backend</h1>
-                <h1 class="text-white text-base font-bold">Backend - Development</h1>
-                <p class="text-gray-400 mb-3 text-sm">Core Java • JDBC • Servlets • JSP • Spring Boot • Node.js</p>
-                <p class="text-gray-400 text-sm leading-6">Bulid secure and scalable backend systems, handle server-side logic and integrate APIs for dynamic web applications.</p>
+                    <h1 class="tracking-wider text-pink-500 text-[15px] [letter-spacing:4%] font-mono">🎤Technical Presentation</h1>
+                <h1 class="text-white text-base font-bold">🏆PPT Presentation Participant - Inter College Technical Event</h1>
+                <p class="text-gray-400 text-sm leading-6">• Presented a topic on "AI for a Better Tomorrow and Agriculture".</p>
+                <p class="text-gray-400 text-sm leading-6">• Explained how AI improves framing efficiency and sustainability.</p>
+                <p class="text-gray-400 text-sm leading-6">• Improved research, presentation, and public speaking skills.</p>
+                <p class="text-gray-400 text-sm leading-6">• Gained confidence in technical communication and audience.</p>
                 </div>
 
-                <div class="mt-9">
-                    <h1 class="tracking-wider text-pink-500 text-[15px] [letter-spacing:4%] font-mono">🛠️Tools</h1>
-                <h1 class="text-white text-base font-bold">Tools & Technologies</h1>
-                <p class="text-gray-400 mb-3 text-sm">VS Code • Eclipse • Figma • Postman • GitHub</p>
-                <p class="text-gray-400 text-sm leading-6">Use modern development tools for coding, API testing, version control and UI/UX design.</p>
-                </div>
             </div>
         </aside>
         </div>
 
-        <article class="h-42 bg-gray-900 ml-1 mt-30 flex justify-center items-center flex-col gap-4 border border-pink-400" id="fourth">
+        <article class="h-42 bg-gray-900 ml-1 mt-30 flex justify-center items-center flex-col gap-4 border border-pink-400 shadow-[0_1px_8px_rgba(236,72,153,0.6)]" id="fourth">
             <p class="text-gray-300">Want a comprehensive overview of my projects, skills, and achievements?</p>
             <a href="./Resume.pdf" download> <button class="bg-pink-500 px-8 py-3 rounded-tr-2xl rounded-bl-2xl font-bold mr-3 cursor-pointer hover:-translate-y-1 transition-all duration-150 ease-linear hover:bg-pink-400 active:text-sm">DOWNLOAD CV</button> </a>
         </article>
@@ -509,7 +510,7 @@
 
     </main>
 
-    <footer class="h-25 w-full bg-black flex items-center justify-around gap-70">
+    <footer class="h-23 w-full bg-black flex items-center justify-around gap-70">
 
         <h1 class="text-pink-500 text-lg font-serif font-semibold tracking-wide">Nouman</h1>
         <p class="text-sm text-gray-400">© 2025 Nouman Full-Stack Developer.</p>
