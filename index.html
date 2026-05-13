@@ -80,56 +80,35 @@
         }
         }
 
-        @media (max-width : 640px){
+        @media (max-width : 650px){
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            body{
+                overflow-x: hidden;
+            }
             header{
-                width: 100%;
-                display:flex;
-                align-items: center;
-                /* padding-right: 250px; */
-                font-size:x-large;
-            }
-            header > div > nav > ul{
-                gap: 30px;
-            }
-            main > #home{
-                padding-top: 100px;
-                flex-direction: column;
-            }
-            main > #home > #aside1 {
-                width: 100vw;
-            }
-            main > #home > #aside1 > aside > div > h1{
-                font-size: x-large;
-            }
-            main > #home > #aside1 > aside > div > span{
-                height: 3px;
-            }
-            main > #home > #aside1 > aside > p{
-                font-size: x-large;
-            }
-            main > #home > #aside1 > #fourth > div{
                 display: flex;
-                gap: 20px;
-            }
-            main > #home > #aside1 > #fourth > div > a > button{
-                width: 220px;
-                height: 70px;
+                justify-content: space-evenly;
+                gap: 7%;
                 font-size: larger;
             }
-            main > #home > #aside1 > #fourth > div > span{
-                height: 3px;
-            }
-            main > #home > #aside1 > #fourth > div > h1{
+            header > div > h1{
                 font-size: x-large;
             }
-            main > #home > #aside2{
-                height: 200px ;
-                width: 100vh;
-                background-color: aqua;
+            main{
+                width: 100%;
+
             }
-            main > #about{
-                height: 1400px;
-                width: 100vw;
+            main > #home{
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                flex-direction: column;
+                padding-left: 2%;
+                background-color: aqua;
             }
 
         }
@@ -158,7 +137,7 @@
     <main>
 
         <!-- Main section -->
-        <section class="h-screen w-screen flex gap-[3%] pt-[5%]" id="home">
+        <section class="h-screen w-full flex gap-[3%] pt-[5%]" id="home">
             <aside class=" h-full w-[50%]" id="aside1">
                 <aside class="mt-12 ml-12 w-full">
             <div class="flex gap-3 mb-7" id="first">
@@ -169,7 +148,7 @@
         <P class="text-gray-400 mt-5 text-xl/7 leading-9 [word-spacing:1px]" id="third">Full-Stack Developer — Aspiring software developer with a completed BCA degree and hands-on experience in full-stack web development. Skilled in HTML, CSS, JavaScript, Oracle SQL, and Java, with a strong foundation in backend and frontend technologies. Certified by Intel for internship performance. Recognized for creativity, clear communication, and a continuous drive to learn, adapt, and grow in the tech industry</P>
         </aside>
         <div id="fourth">
-            <div class="mt-9 ml-12 w-[50%]">
+            <div class="mt-9 ml-12 w-[50%] flex">
             <a href="#projects"> <button class="bg-pink-500 px-8 py-3 rounded-tr-2xl rounded-bl-2xl font-bold mr-3 cursor-pointer hover:-translate-y-1 transition-all duration-150 ease-linear hover:bg-pink-400 active:text-sm">VIEW MY WORK</button> </a>
             <a href="#contact"> <button class="px-8 py-3 font-bold text-pink-500 border border-pink-950 cursor-pointer hover:-translate-y-1 transition-all duration-150 ease-linear hover:border-pink-500 active:text-sm">GET IN TOUCH</button> </a>
         </div>
@@ -180,9 +159,9 @@
         </div>
             </aside>
 
-            <aside class="w-[47%] h-full border flex justify-center items-center border-pink-500" id="aside2">
+            <aside class="w-[47%] h-full flex justify-center items-center border-pink-500" id="aside2">
 
-                <div class="text-white">Avatar</div>
+                <img src="./avatar.png" alt="Avatar" class="bg-black h-[80%]" id="arrow">
                 
             </aside>
     </section>

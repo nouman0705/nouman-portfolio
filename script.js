@@ -4,7 +4,7 @@ let arrow=document.getElementById("arrow")
 
 window.addEventListener("scrollend",()=>{
     arrow.style.opacity="15%"
-    arrow.style.transition="3s"
+    arrow.style.transition="2s"
 })
 
 window.addEventListener("scroll",()=>{
