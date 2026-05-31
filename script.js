@@ -3,6 +3,7 @@ let links = document.querySelectorAll("li")
 let arrow=document.getElementById("arrow")
 let form = document.querySelector("form")
 let formBtn = document.querySelector("[type=submit]")
+let box=document.getElementById("statusBox")
 
 window.addEventListener("scrollend",()=>{
     arrow.style.opacity="12%"
@@ -26,9 +27,18 @@ formBtn.addEventListener("click",async()=>{
     const message = document.querySelector("textarea").value.trim();
 
     if(!firstName || !lastName || !email || !subject || !message){
-        alert("Please fill in all fields.")
+        box.innerHTML="Fill All The Fields❕"
+        box.style.color="yellow"
+        box.style.borderColor="yellow"
+        box.style.display="block"
+
+        setTimeout(()=>{
+        box.style.display="none"
+        },5000)
+
         return;
     }
+
 
     const data = {firstName,lastName,email,subject,message}
 
@@ -39,17 +49,33 @@ formBtn.addEventListener("click",async()=>{
             body : JSON.stringify(data)
         });
         if(response.ok){
-            alert('Message sent successfully! I will get back to you soon.');
+            box.innerHTML="Message sent successfully! I will get back to you soon.✅"
+            box.style.color="green"
+            box.style.borderColor="green"
+            box.style.display="block"
+
+            setTimeout(()=>{
+            box.style.display="none"
+           },5000)
+
             document.querySelectorAll("input").forEach((element)=>{element.value = ""});
             document.querySelector("textarea").value = "";
         }else{
             alert("Something went wrong. Please try again.")
         }
     } catch(error){
-        alert("Could not connect to server. Make sure the backend is running..")
+        box.innerHTML="Oops something went wrong💀"
+        box.style.color="red"
+        box.style.borderColor="red"
+        box.style.display="block"
+
+        setTimeout(()=>{
+        box.style.display="none"
+        },5000)
+
         console.error(error)
     }
-    
+
 })
 
 
