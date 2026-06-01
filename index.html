@@ -26,6 +26,9 @@
         #fifth{
             animation: movingText 5s ease-in;
         }
+        #avatar{
+            animation: glowPluse 5s ease-in-out infinite;
+        }
 
           @keyframes movingText{
         0%{
@@ -81,6 +84,12 @@
         }
         }
 
+        @keyframes glowPluse {
+            0% { transform: translateY(0px); filter: drop-shadow(0 0 8px #ec4899);}
+            50% { transform: translateY(-18px); filter: drop-shadow(0 0 25px #ec4899) drop-shadow(0 0 25px #a855f7)}
+            100% { transform: translateY(0px); filter : drop-shadow(0 0 8px #ec4899)}
+        }
+
 @media screen and (max-width: 768px) {
     /* ===== HEADER / NAV ===== */
     header {
@@ -120,6 +129,9 @@
     }
     #home p {
         font-size: 1rem;
+    }
+    #home img{
+        
     }
     #viewBtn {
         width: 90% !important;
@@ -258,6 +270,7 @@
     #contact .flex.justify-between {
         flex-direction: column;
         gap: 16px;
+        height: auto;
     }
     #contact .flex.justify-between > div {
         width: 100% !important;
@@ -395,6 +408,8 @@
 }
 
 
+
+
 /* ===== DESKTOP (1024px - 1440px) ===== */
 /* @media screen and (min-width: 1024px) and (max-width: 1440px) {
 
@@ -494,10 +509,10 @@
 
             <aside class="w-[40%] flex justify-center items-center" id="aside2">
 
-                <img src="./avatar3.png" alt="Avatar" class="h-120 rounded-full mt-12 p-8 " id="fifth">
-                <span class="text-pink-500 text-4xl font-bold shadow-[0_1px_20px_rgba(260,22,953,12)] rounded-full animate-bounce absolute top-38 right-80" id="icon1"><i class="fa-brands fa-react"></i></span>
+                <img src="./avatar3.png" alt="Avatar" class="h-120 rounded-full mt-12 p-8 " id="avatar">
+                    <span class="text-pink-500 text-4xl font-bold shadow-[0_1px_20px_rgba(260,22,953,12)] rounded-full animate-bounce absolute top-38 right-80" id="icon1"><i class="fa-brands fa-react"></i></span>
                 <span class="text-pink-500 text-4xl font-bold shadow-[0_1px_20px_rgba(260,22,953,12)] rounded-full animate-bounce absolute top-95 right-144" id="icon2"><i class="fa-brands fa-html5"></i></span>
-                <span class="text-pink-500 text-4xl font-bold shadow-[0_1px_20px_rgba(260,22,953,12)] rounded-full animate-bounce absolute top-95 right-25" id="icon3"><i class="fa-brands fa-css"></i></span>
+                <span class="text-pink-500 text-4xl font-bold shadow-[0_1px_20px_rgba(260,22,953,12)] rounded-full animate-bounce absolute top-95 right-21" id="icon3"><i class="fa-brands fa-css"></i></span>
                 <span class="text-pink-500 text-4xl font-bold shadow-[0_1px_20px_rgba(260,22,953,12)] rounded-full animate-bounce absolute bottom-4 right-80" id="icon4"><i class="fa-brands fa-js"></i></span>
                 <span class="text-pink-500 text-4xl font-bold shadow-[0_1px_20px_rgba(260,22,953,12)] rounded-full animate-bounce absolute top-58 right-126" id="icon5"><i class="fa-brands fa-java"></i></span>
                 <span class="text-pink-500 text-4xl font-bold shadow-[0_1px_20px_rgba(260,22,953,12)] rounded-full animate-bounce absolute bottom-30 right-39" id="icon6"><i class="fa-solid fa-database"></i></span>
@@ -572,7 +587,7 @@
         </aside>
 
         <figure class="h-[70%] w-[45%] mb-13" id="fourth">
-                    <img src="./imgs.png" alt="" class="border border-pink-500 w-[80%] h-full rounded-full shadow-[0_2px_20px_rgba(236,72,153,0.6)] object-center">
+                    <img src="./img2.png" alt="" class="border border-pink-500 w-[80%] h-full rounded-full shadow-[0_2px_20px_rgba(236,72,153,0.6)] object-center">
             </div>
             </div>
 
